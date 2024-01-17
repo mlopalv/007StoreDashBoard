@@ -1,9 +1,8 @@
 import React from 'react';
 import image from '../assets/images/logo-2.png';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
-import LastMovieInDb from './LastMovieInDb';
-import ContentRowMovies from './ContentRowMovies';
+import ProductsByCategory from './ProductsByCategory';
+import LastProductInDb from './LastProductInDb';
 import Chart from './Chart';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
@@ -56,7 +55,7 @@ function SideBar(){
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/Chart">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Productos</span></Link>
+                        <span>Products</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -68,10 +67,10 @@ function SideBar(){
                     <ContentWrapper />
                 </Route>
                 <Route path="/GenresInDb">
-                    <GenresInDb />
+                    <ProductsByCategory />
                 </Route>
                 <Route path="/LastMovieInDb">
-                    <LastMovieInDb />
+                    <LastProductInDb />
                 </Route>
                 <Route path="/Chart">
                     <Chart />

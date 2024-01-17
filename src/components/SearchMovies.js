@@ -2,7 +2,7 @@ import React from 'react';
 
 import noPoster from '../assets/images/no-poster.jpg';
 
-function SearchMovies(){
+function SearchProducts(){
 
 	const movies = [
 		{
@@ -17,7 +17,7 @@ function SearchMovies(){
 		},
 	];
 
-	const keyword = 'PELÍCULA DEMO';
+	const keyword = 'Product demo';
 
 	// Credenciales de API
 	const apiKey = 'X'; // Intenta poner cualquier cosa antes para probar
@@ -32,7 +32,7 @@ function SearchMovies(){
 							{/* Buscador */}
 							<form method="GET">
 								<div className="form-group">
-									<label htmlFor="">Buscar por título:</label>
+									<label htmlFor="">Search by product name:</label>
 									<input type="text" className="form-control" />
 								</div>
 								<button className="btn btn-info">Search</button>
@@ -41,7 +41,7 @@ function SearchMovies(){
 					</div>
 					<div className="row">
 						<div className="col-12">
-							<h2>Películas para la palabra: {keyword}</h2>
+							<h2>Product key words: {keyword}</h2>
 						</div>
 						{/* Listado de películas */}
 						{
@@ -69,13 +69,13 @@ function SearchMovies(){
 							})
 						}
 					</div>
-					{ movies.length === 0 && <div className="alert alert-warning text-center">No se encontraron películas</div>}
+					{ movies.length === 0 && <div className="alert alert-warning text-center">No products found</div>}
 				</>
 				:
-				<div className="alert alert-danger text-center my-4 fs-2">Eyyyy... ¿PUSISTE TU APIKEY?</div>
+				<div className="alert alert-danger text-center my-4 fs-2">Eyyyy... ¿did you enter your API key?</div>
 			}
 		</div>
 	)
 }
 
-export default SearchMovies;
+export default SearchProducts;

@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from "react";
 /* <!-- Movies in DB --> */
 
 let productsInDB = {
-    title: "Total de productos",
+    title: "Total products",
     color: 'primary',
     cuantity: 21,
     icon: 'fa-clipboard-list'
@@ -16,7 +16,7 @@ let productsInDB = {
 /* <!-- Total awards --> */
 
 let totalUsers = {
-    title: "Total de usuarios",
+    title: "Total users",
     color: 'success',
     cuantity: '79',
     icon: 'fa-award'
@@ -25,7 +25,7 @@ let totalUsers = {
 /* <!-- Actors quantity --> */
 
 let totalCategories = {
-    title: "Total de categorías",
+    title: "Total categories",
     color: 'warning',
     cuantity: '49',
     icon: 'fa-user-check'
@@ -34,7 +34,7 @@ let totalCategories = {
 let cartProps = [productsInDB, totalUsers, totalCategories];
 
 
-function ContentRowMovies() {
+function ContentRowStoreTotals() {
 
     //Variables de estado par productos, categorìas y usuarios
     let [productos, setProductos] = useState(productsInDB);
@@ -91,4 +91,4 @@ function ContentRowMovies() {
     )
 }
 
-export default ContentRowMovies;
+export default ContentRowStoreTotals;

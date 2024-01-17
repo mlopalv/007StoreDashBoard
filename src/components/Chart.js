@@ -48,23 +48,23 @@ function Chart() {
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
             <div className="card-header py-3">
-                <h5 className="m-0 font-weight-bold text-gray-800">Listado completo de productos</h5>
+                <h5 className="m-0 font-weight-bold text-gray-800">Products list</h5>
             </div>
             <div className="card-body">
                 <div className="table-responsive">
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Nombre</th>
-                                <th>Categoría</th>
-                                <th>Precio</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Nombre</th>
-                                <th>Categoría</th>
-                                <th>Precio</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
                             </tr>
                         </tfoot>
                         <tbody>

@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 
 
-function GenresInDb() {
+function ProductsByCategory() {
 
   let [categorias, setCategorias] = useState([]);
 
@@ -31,7 +31,7 @@ function GenresInDb() {
 
         <div className="card-header py-3">
           <h5 className="m-0 font-weight-bold text-gray-800">
-            Productos por categoría
+            Products by category
           </h5>
         </div>
         <div className="card-body">
@@ -42,9 +42,9 @@ function GenresInDb() {
               categorias.map((categoria, i) => {
                 return (
 
-                  <div className="col-lg-6 mb-4">
+                  <div className="col-lg-6 mb-4" key={i}>
                     <div className="card bg-dark text-white shadow">
-                      <div key={i} className="card-body">{categoria.category} ({categoria.quantity})</div>
+                      <div className="card-body">{categoria.category} ({categoria.quantity})</div>
                     </div>
                   </div>
 
@@ -58,4 +58,4 @@ function GenresInDb() {
   );
 }
 
-export default GenresInDb;
+export default ProductsByCategory;
