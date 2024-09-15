@@ -34,6 +34,7 @@ function LastProductInDb(){
            lastProductInDB.categorie =  ultimoProductoEnArray.categorie;
            lastProductInDB.imagePath =  ultimoProductoEnArray.imagePath;
            lastProductInDB.precio = ultimoProductoEnArray.precio;
+           console.log("Last product imagePath -> " + lastProductInDB.imagePath);
 
            setUltimoProducto(lastProductInDB);
 
@@ -54,14 +55,14 @@ function LastProductInDb(){
                         <p className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem', "fontWeight": "bold"}}>{ultimoProducto.name}</p>
                     </div>
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 30 +'rem'}} src={ultimoProducto.imagePath} alt= {" 007 - Global Store " + ultimoProducto.name } />
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 30 +'rem'}} src={apiHostURL + ultimoProducto.imagePath} alt= {" 007 - Global Store " + ultimoProducto.name } />
                     </div>
                     
                     <div className="text-center">
                         <p className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem', "fontWeight": "bold"}}>Price: $ {ultimoProducto.precio}</p>
                     </div>
                     <div className="text-center">
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href={"http://localhost:3001/products/"+ultimoProducto.id}>View product details</a>
+                    <a className="btn btn-danger" target="_blank" rel="nofollow" href={apiHostURL + "/products/"+ultimoProducto.id}>View product details</a>
                     </div>
                 </div>
             </div>
