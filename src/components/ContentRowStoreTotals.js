@@ -2,6 +2,9 @@ import React from 'react';
 import SmallCard from './SmallCard';
 import { useState, useEffect, useRef } from "react";
 
+//Reqiore module to pull environment variables
+const apiHostURL = process.env.REACT_APP_API_HOST_URL;
+
 /*  Cada set de datos es un objeto literal */
 
 /* <!-- Movies in DB --> */
@@ -44,7 +47,7 @@ function ContentRowStoreTotals() {
     useEffect(() => {
 
         //Cargar el total de productos
-        fetch("http://127.0.0.1:3001/api/products").then( (response) => {            
+        fetch(apiHostURL + "/api/products").then( (response) => {            
             
             return response.json();
         }).then( (data) => {
@@ -61,7 +64,7 @@ function ContentRowStoreTotals() {
         });
 
 
-        fetch("http://127.0.0.1:3001/api/users").then( (response) => {            
+        fetch(apiHostURL + "/api/users").then( (response) => {            
             
             return response.json();
         }).then( (data) => {
